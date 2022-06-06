@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_centerVertical="true"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <TextView
+        android:id="@+id/idDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:text="Sat ,Nov 21" />
+
+    <TextView
+        android:id="@+id/idTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/idiconweather"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
+        tools:text="20 °C" />
+
+    <TextView
+        android:id="@+id/idTvsunrisetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/idiconsunset"
+        app:layout_constraintEnd_toStartOf="@+id/idiconsunset"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/idiconsunrise"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_below="@id/idTempmax"
+        tools:layout_toEndOf="@id/idTempmax"
+        tools:text="2 °C" />
+
+    <ImageView
+        android:id="@+id/idiconweathermin"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thermometer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222"
+        tools:layout_toRightOf="@id/idDate" />
+
+    <ImageView
+        android:id="@+id/idiconweathermax"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hightemperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222"
+        tools:layout_toLeftOf="@id/idTempmax" />
+
+    <ImageView
+        android:id="@+id/idiconsunset"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+
+        android:layout_below="@id/idiconweathermin"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sunset"
+        app:layout_constraintBottom_toBottomOf="@+id/idTvsunsettime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_toEndtOf="@id/idDate" />
+
+    <TextView
+        android:id="@+id/idTvsunsettime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="156dp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idDate"
+        app:layout_constraintVertical_bias="0.13"
+        tools:layout_toRightOf="@id/idiconsunset"
+        tools:text="40 °C" />
+
+    <TextView
+        android:id="@+id/idTempmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:layout_toRightOf="@id/idiconsunrise"
+        tools:text="40 °C" />
+
+    <ImageView
+        android:id="@+id/idiconsunrise"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:layout_below="@id/idiconweathermin"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sunrise"
+        app:layout_constraintBottom_toBottomOf="@+id/idTvsunrisetime"
+        app:layout_constraintEnd_toStartOf="@+id/idiconsunset"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_toEndtOf="@id/idDate"
+        tools:layout_toRightOf="@id/idTvsunsettime" />
+
+    <TextView
+        android:id="@+id/idTempmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/idiconweathermax"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:text="40 °C" />
+
+    <ImageView
+        android:id="@+id/idiconweather"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/w01d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

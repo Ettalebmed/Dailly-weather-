@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+
+        >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:id="@+id/etcityname"
+            android:hint="Enter The city Name"
+            android:layout_weight="70"
+            android:background="@drawable/border_edit_text"
+            />
+        <Button
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="30"
+            android:text="Search"
+            android:background="@drawable/border_button"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="100">
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_weight="40"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/w01d"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+
+            />
+        <LinearLayout
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvcityname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="London ,UK " />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="20 °C" />
+            <TextView
+                android:id="@+id/idDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                tools:text="London ,UK " />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_marginTop="10dp"
+            android:id="@+id/lvDailyweather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
