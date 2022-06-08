@@ -62,7 +62,7 @@ public class weatherAdapter extends ArrayAdapter<Weather>{
         dateFormat1.setTimeZone(TimeZone.getTimeZone(weather.getTimezone() ));
 
         sunset.setText(dateFormat1.format(sunsetTime)+"");
-
+    //
 
         Date sunriseTime =new Date(weather.getSunriseTime()*1000);
         DateFormat dateFormat2= new SimpleDateFormat("hh,mm", Locale.ENGLISH) ;
